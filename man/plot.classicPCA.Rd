@@ -1,8 +1,8 @@
-\name{Computes and plots classic PCA based on maximum likelihood covariance matrix and mean estimates}
+\name{plot.classicPCA}
 \alias{plot.classicPCA}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Computes and plots classic PCA based on maximum likelihood covariance matrix and mean estimates
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
