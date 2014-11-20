@@ -13,16 +13,16 @@ summary.loadings.bPCA(loadings.chain, vars.to.get, axes.to.get, quantiles = c(0.
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{loadings.chain}{
-%%     ~~Describe \code{loadings.chain} here~~
+output of function get.loadings.chain.bPCA
 }
   \item{vars.to.get}{
-%%     ~~Describe \code{vars.to.get} here~~
+numeric vector of variables to summarize
 }
   \item{axes.to.get}{
-%%     ~~Describe \code{axes.to.get} here~~
+numeric vector of axes to summarize
 }
   \item{quantiles}{
-%%     ~~Describe \code{quantiles} here~~
+numeric vector of quantiles to summarize
 }
 }
 \details{

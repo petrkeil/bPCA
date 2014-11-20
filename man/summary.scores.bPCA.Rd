@@ -13,13 +13,13 @@ summary.scores.bPCA(scores.chain, axes.to.get, quantiles = c(0.025, 0.5, 0.975))
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{scores.chain}{
-%%     ~~Describe \code{scores.chain} here~~
+output of function get.scores.chain.bPCA
 }
   \item{axes.to.get}{
-%%     ~~Describe \code{axes.to.get} here~~
+numeric vector of axes to summarize
 }
   \item{quantiles}{
-%%     ~~Describe \code{quantiles} here~~
+numeric vector of quantiles to summarize
 }
 }
 \details{

@@ -13,10 +13,10 @@ get.loadings.chain.bPCA(bPCA.fitted, data)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bPCA.fitted}{
-%%     ~~Describe \code{bPCA.fitted} here~~
+object of class \code{rjags} returned by the \code{sim.bPCA} function.
 }
   \item{data}{
-%%     ~~Describe \code{data} here~~
+data matrix in standard form for ordination analyses
 }
 }
 \details{

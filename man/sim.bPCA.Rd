@@ -13,28 +13,28 @@ sim.bPCA(data, covmat.prior, covmat.prior.DF, mu.prior, mu.prior.cov, n.chains, 
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{data}{
-%%     ~~Describe \code{data} here~~
+data matrix in standard form for ordination analyses
 }
   \item{covmat.prior}{
-%%     ~~Describe \code{covmat.prior} here~~
+covariance matrix prior (note that whole covariance matrix must be stated, not single covariances)
 }
   \item{covmat.prior.DF}{
-%%     ~~Describe \code{covmat.prior.DF} here~~
+informativeness of covariance matrix prior (integer)
 }
   \item{mu.prior}{
-%%     ~~Describe \code{mu.prior} here~~
+vector of prior for means of multivariate normal distribution
 }
   \item{mu.prior.cov}{
-%%     ~~Describe \code{mu.prior.cov} here~~
+mu prior informativeness (matrix of covariances)
 }
   \item{n.chains}{
-%%     ~~Describe \code{n.chains} here~~
+number of chains in MCMC algorithm
 }
   \item{n.iter}{
-%%     ~~Describe \code{n.iter} here~~
+total number of iterations in MCMC algorithm
 }
   \item{n.burnin}{
-%%     ~~Describe \code{n.burnin} here~~
+number of burnin iterations in MCMC algorithm
 }
   \item{simulation}{
 %%     ~~Describe \code{simulation} here~~
