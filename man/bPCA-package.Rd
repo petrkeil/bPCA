@@ -66,7 +66,7 @@ eigenvalplots.bPCA(bPCA.fitted, iris[,1:4])
 
 # PCA biplots of the 1st and 2nd axes. We extract 2.5%, 50% and 97.5%
 # quantiles of the posterior distributions:
-biplots.bPCA(bPCA.fitted, iris[,1:4], axes.to.plot=c(1,2), ylim=c(-2,2))
+biplots.bPCA(bPCA.fitted, iris[,1:4], axes.to.plot=c(1,2))
 
 # We can compare the previous plots with classical PCA biplot:
 plot.classicPCA(iris[,1:4], axes.to.plot=1:2, scale=1, ylim=c(-1,1))
