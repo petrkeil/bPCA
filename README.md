@@ -1,8 +1,15 @@
 # bPCA - Bayesian Principal Components Analysis
 
+*Jan Smyčka*, *Petr Keil*
 
 ### Description
 This is an R package that enables to perform Bayesian Principal Components Analysis, which we call bPCA. 
+
+### Installation
+For easy installation directly from this repository **just type this in R**:
+	library(devtools)
+	install_github("bPCA", username="petrkeil")
+	library(bPCA)
 
 ### The idea
 The idea is to fit a **MultiVariate Normal (MVN) distribution** to set of continuous variables. The fitting is done using MCMC sampler in JAGS. The means and covariances (parameters of the MVN) are monitored during the MCMC sampling and stored as MCMC chains, and subsequently subjected to various summary procedures.
