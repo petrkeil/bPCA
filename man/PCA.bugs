@@ -1,0 +1,18 @@
+
+  model
+  {
+    # priors on the vector of multinormal means
+    mu[1:V] ~ dmnorm(mu.prior[], mu.prior.prec[,])
+    # priors on the covariance matrix
+    prec[1:V,1:V] ~ dwish(covmat.prior[,], covmat.prior.DF)
+    
+    # makes covariance from precision
+    cov[1:V,1:V] <- inverse(prec[,])
+
+    # likelihood
+    for (i in 1:N)
+    {
+      Y[i,1:V] ~ dmnorm(mu[], prec[,])
+    }
+  }
+  

@@ -45,13 +45,9 @@ Maintainer: Petr Keil <pkeil@seznam.cz>, Jan Smycka <smyckaj@gmail.com>
 \references{
 Legendre & Legendre (1998) Numerical Ecology. Elsevier, Amsterdam.
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R ~~
-~~ documentation directory ~~
+
 \keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
+
 \examples{
 
 # We will use first four variables the "iris" dataset in the package "datasets":

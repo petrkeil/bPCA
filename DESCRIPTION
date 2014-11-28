@@ -6,5 +6,5 @@ Date: 2014-11-03
 Author: Jan Smycka, Petr Keil
 Maintainer: Petr Keil <pkeil@seznam.cz>, Jan Smycka <smyckaj@gmail.com>
 Depends: R (>= 3.0), R2jags, MASS, Matrix, coda, reshape, lattice
-Description: Allows to calculate PCA in a Bayesian setting. Prior information on the association (covariances) between variables can be provided. Calculates full posterior distributions of eigenvalues, explained variances, loadings and scorees, and it also plots the posteriors. Some basic plotting and summary functions are also provided.
+Description: Allows to calculate PCA in Bayesian setting. Prior information on the association (covariances) between variables can be provided. Calculates full posterior distributions of eigenvalues, explained variances, loadings and scorees, and it also plots the posteriors. Some basic plotting and summary functions are also provided.
 License: GNU GPL (>=2)

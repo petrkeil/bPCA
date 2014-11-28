@@ -13,21 +13,18 @@ get.loadings.chain.bPCA(bPCA.fitted, data)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bPCA.fitted}{
-object of class \code{rjags} returned by the \code{sim.bPCA} function.
+Object of class \code{rjags} returned by the \code{sim.bPCA} function.
 }
   \item{data}{
-data matrix in standard form for ordination analyses
+Data matrix in standard form for ordination analyses.
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+The returned object can be further summarized by the \code{summary.loadings.bPCA} function.
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns a list of length that is equal to the number of MCMC steps. Each element
+is a matrix of the PCA loadings.
 }
 \references{
 %% ~put references to the literature/web site here ~
@@ -45,29 +42,9 @@ data matrix in standard form for ordination analyses
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+bPCA.fitted <- sim.bPCA(iris[,1:4])
+get.loadings.chain.bPCA(bPCA.fitted, iris[,1:4])
 
-## The function is currently defined as
-function (bPCA.fitted, data) 
-{
-    sims <- bPCA.fitted$BUGSoutput$sims.matrix
-    V <- ncol(data)
-    sims.cov <- sims[, 1:(V^2)]
-    sims.cov <- split(sims.cov, seq(nrow(sims.cov)))
-    names(sims.cov) <- NULL
-    load.extract <- function(cov, V, data) {
-        covm = matrix(cov, V, V)
-        loadings <- eigen(covm)$vectors
-        row.names(loadings) <- names(data)
-        colnames(loadings) <- paste("Comp.", 1:V, sep = "")
-        return(loadings)
-    }
-    loadings.chain <- lapply(X = sims.cov, FUN = load.extract, 
-        V = V, data = data)
-    return(loadings.chain)
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

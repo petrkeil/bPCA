@@ -8,9 +8,7 @@ sim.bPCA <- function(data,
                     #MCMC specication
                     n.chains,
                     n.iter,
-                    n.burnin,
-                    #output
-                    simulation){
+                    n.burnin){
   
   # requirements
   require(R2jags)
@@ -141,7 +139,7 @@ plot.classicPCA <- function(data, axes.to.plot=1:2, scale=1, xlim, ylim)
 # ------------------------------------------------------------------------------
 # SIMPLE BIPLOTS OF THE BAYESIAN PCA
 
-biplots.bPCA <- function(bPCA.fitted, data, axes.to.plot=1:2, scale=1, xlim, ylim)
+biplots.bPCA <- function(bPCA.fitted, data, axes.to.plot=1:2, scale=1)
 {
   V = length(data[1,])
   summ.stats <- c("2.5%", "50%", "97.5%")
@@ -160,8 +158,7 @@ biplots.bPCA <- function(bPCA.fitted, data, axes.to.plot=1:2, scale=1, xlim, yli
              y=loadings[,axes.to.plot], 
              main=paste(summ.stat, "of Bayesian PCA"), 
              xlab=paste("Comp.", axes.to.plot[1]),
-             ylab=paste("Comp.", axes.to.plot[2]),
-             xlim=xlim, ylim=ylim)
+             ylab=paste("Comp.", axes.to.plot[2]))
       abline(h=0, lty=2, col="grey"); abline(v=0, lty=2, col="grey")
   }
 }

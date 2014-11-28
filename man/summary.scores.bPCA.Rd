@@ -23,14 +23,9 @@ numeric vector of quantiles to summarize
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+List of quantiles of the selected loadings. 
 }
 \references{
 %% ~put references to the literature/web site here ~
@@ -48,28 +43,9 @@ numeric vector of quantiles to summarize
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (scores.chain, axes.to.get, quantiles = c(0.025, 0.5, 
-    0.975)) 
-{
-    trimmer2 <- function(M, axes.to.get) {
-        M2 <- as.matrix(M[, axes.to.get])
-        colnames(M2) <- paste("Comp.", axes.to.get, sep = "")
-        return(M2)
-    }
-    scores.trimmed <- lapply(scores.chain, FUN = trimmer2, axes.to.get)
-    output <- vector(mode = "list", length = length(quantiles))
-    names(output) <- as.character(quantiles)
-    for (i in 1:length(quantiles)) {
-        output[[i]] <- apply(simplify2array(scores.trimmed), 
-            1:2, FUN = quantile, probs = quantiles[i])
-    }
-    return(output)
-  }
+bPCA.fitted <- sim.bPCA(iris[,1:4])
+scores <- get.scores.chain.bPCA(bPCA.fitted, iris[,1:4])
+summary.scores.bPCA(scores, axes.to.get=1:2)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

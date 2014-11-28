@@ -13,7 +13,7 @@ plot.classicPCA(data)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{data}{
-data matrix in standard form for ordination analyses
+Data matrix in standard form for ordination analyses.
 }
 }
 \details{
@@ -42,7 +42,7 @@ data matrix in standard form for ordination analyses
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-
+  plot.classicPCA(iris[,1:4])
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
