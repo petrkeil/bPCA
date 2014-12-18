@@ -128,7 +128,7 @@ plot.classicPCA <- function(data, axes.to.plot=1:2, scale=1, xlim, ylim)
   scores <- scores[,axes.to.plot]
   loadings <- loadings[,axes.to.plot]
   
-  biplot(scores,loadings, main="Classic PCA",
+  biplot(x=scores, y=loadings, main="Classic PCA",
          xlab=paste("Comp.", axes.to.plot[1]),
          ylab=paste("Comp.", axes.to.plot[2]),
          ylim=ylim, xlim=xlim)
