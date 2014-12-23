@@ -17,7 +17,12 @@ Vector of indices of principal components that are plotted.
   \item{scale}{
 Scaling constant.
 }
-
+  \item{xlim}{
+x axis limits. Default is adaptive size.
+}
+  \item{ylim}{
+y axis limits. Default is adaptive size.
+}
 }
 
 \details{

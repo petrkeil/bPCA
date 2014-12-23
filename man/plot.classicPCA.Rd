@@ -15,6 +15,12 @@ plot.classicPCA(data)
   \item{data}{
 Data matrix in standard form for ordination analyses.
 }
+  \item{xlim}{
+x axis limits. Default is adaptive size.
+}
+  \item{ylim}{
+y axis limits. Default is adaptive size.
+}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~

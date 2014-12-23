@@ -139,7 +139,7 @@ plot.classicPCA <- function(data, axes.to.plot=1:2, scale=1, xlim, ylim)
 # ------------------------------------------------------------------------------
 # SIMPLE BIPLOTS OF THE BAYESIAN PCA
 
-biplots.bPCA <- function(bPCA.fitted, data, axes.to.plot=1:2, scale=1)
+biplots.bPCA <- function(bPCA.fitted, data, axes.to.plot=1:2, scale=1,xlim,ylim)
 {
   V = length(data[1,])
   summ.stats <- c("2.5%", "50%", "97.5%")
