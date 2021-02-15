@@ -10,7 +10,7 @@ For easy installation directly from this repository **just type this in R**:
 
 	library(devtools)
 
-	install_github("bPCA", username="petrkeil")
+	install_github("petrkeil/bPCA")
 	
 	library(bPCA)
 
